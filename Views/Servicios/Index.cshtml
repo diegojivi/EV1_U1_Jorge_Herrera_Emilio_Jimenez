@@ -1,0 +1,83 @@
+﻿@model IEnumerable<mercy_developers.Models.Servicio>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Diagnostico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mantenimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RepararReemplazar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReinstalarInstalarSowfware)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaInicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaTermino)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Valor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Idcliente)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Diagnostico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mantenimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RepararReemplazar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReinstalarInstalarSowfware)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaInicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaTermino)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Valor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Idcliente)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Idservicio">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Idservicio">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Idservicio">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,73 @@
+﻿@model mercy_developers.Models.Servicio
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Servicio</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Diagnostico" class="control-label"></label>
+                <input asp-for="Diagnostico" class="form-control" />
+                <span asp-validation-for="Diagnostico" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mantenimiento" class="control-label"></label>
+                <input asp-for="Mantenimiento" class="form-control" />
+                <span asp-validation-for="Mantenimiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RepararReemplazar" class="control-label"></label>
+                <input asp-for="RepararReemplazar" class="form-control" />
+                <span asp-validation-for="RepararReemplazar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReinstalarInstalarSowfware" class="control-label"></label>
+                <input asp-for="ReinstalarInstalarSowfware" class="form-control" />
+                <span asp-validation-for="ReinstalarInstalarSowfware" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaInicio" class="control-label"></label>
+                <input asp-for="FechaInicio" class="form-control" />
+                <span asp-validation-for="FechaInicio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaTermino" class="control-label"></label>
+                <input asp-for="FechaTermino" class="form-control" />
+                <span asp-validation-for="FechaTermino" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Valor" class="control-label"></label>
+                <input asp-for="Valor" class="form-control" />
+                <span asp-validation-for="Valor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Idcliente" class="control-label"></label>
+                <input asp-for="Idcliente" class="form-control" />
+                <span asp-validation-for="Idcliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
